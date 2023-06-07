@@ -17,7 +17,7 @@ contract TokenVesting {
         require(_amount > 0, "Amount must be greater than zero");
 
         // Perform token transfer to the vesting contract
-        ERC20(token).transferFrom(msg.sender, address(this), _amount);  // Transfer `_amount` tokens from the sender to the vesting contract
+        IERC20(token).transferFrom(msg.sender, address(this), _amount);  // Transfer `_amount` tokens from the sender to the vesting contract
 
         vestingSchedule[_beneficiary] = _releaseTime;
     }
@@ -27,7 +27,7 @@ contract TokenVesting {
         require(releaseTime > 0 && block.timestamp >= releaseTime, "Tokens not yet released");
 
         // Perform token transfer to the beneficiary
-        ERC20(token).transfer(msg.sender, ERC20(token).balanceOf(address(this)));  // Transfer all remaining tokens in the vesting contract to the beneficiary
+        IERC20(token).transfer(msg.sender, IERC20(token).balanceOf(address(this)));  // Transfer all remaining tokens in the vesting contract to the beneficiary
 
         // Reset the release time to prevent multiple releases
         vestingSchedule[msg.sender] = 0;
