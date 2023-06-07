@@ -131,12 +131,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/3_TokenSwap.sol": {
-			"keccak256": "0x0a2837549e942bef17025345a024d63f9486f96ab8c9197f70b1def500cae16f",
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x287b55befed2961a7eabd7d7b1b2839cbca8a5b80ef8dcbb25ed3d4c2002c305",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0df73365171cb831775fa038f9aba483fa1a6583363457f7c182ede4cc239c43",
-				"dweb:/ipfs/QmSGvsTLV5eCPVkxU7p5o6kyVcSzdQ4n4RuKC89vWzFuEB"
+				"bzz-raw://bd39944e8fc06be6dbe2dd1d8449b5336e23c6a7ba3e8e9ae5ae0f37f35283f5",
+				"dweb:/ipfs/QmPV3FGYjVwvKSgAXKUN3r9T9GwniZz83CxBpM7vyj2G53"
+			]
+		},
+		"contracts/3_TokenSwap.sol": {
+			"keccak256": "0xa52d3c7c76ff7bda35bd1c3db2d77b5deae58ed06086557da2671bb0d426d0a9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://56f3bbe9da98add3b9dbe58079420fda44b0b7d4b176f83aec9631eb09b0388f",
+				"dweb:/ipfs/QmQ2TGkewkmTW44NbTouL8q1iFM7UDV7DjRCMMfyMntULE"
 			]
 		}
 	},

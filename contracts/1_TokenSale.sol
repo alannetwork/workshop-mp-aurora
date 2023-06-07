@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 // CODE NOT AUDITED
 // USE ONLY FOR EDUCATIONAL PURPOSE
@@ -18,7 +19,7 @@ contract TokenSale {
         require(msg.value >= totalPrice, "Insufficient payment");
 
         // Perform token transfer to the buyer
-        ERC20(token).transfer(msg.sender, _amount);  // Transfer `_amount` tokens to the buyer's address
+        IERC20(token).transfer(msg.sender, _amount);  // Transfer `_amount` tokens to the buyer's address
 
         // Emit an event to indicate a successful purchase
         emit TokensPurchased(msg.sender, _amount, totalPrice);

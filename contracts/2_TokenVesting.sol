@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 // CODE NOT AUDITED
 // USE ONLY FOR EDUCATIONAL PURPOSE
