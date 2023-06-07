@@ -99,7 +99,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/1_TokenSell.sol": "TokenSale"
+			"contracts/1_TokenSale.sol": "TokenSale"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -113,7 +113,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/1_TokenSell.sol": {
+		"contracts/1_TokenSale.sol": {
 			"keccak256": "0x6fc4b7657bd7e8360ba82fc74b964cb9fa0fa921ddc8ed66c779a3ac5c1f2fca",
 			"license": "MIT",
 			"urls": [
