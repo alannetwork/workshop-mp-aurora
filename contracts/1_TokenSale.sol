@@ -18,7 +18,7 @@ contract TokenSale {
         require(msg.value >= totalPrice, "Insufficient payment");
 
         // Perform token transfer to the buyer
-        // Implement the transfer logic here
+        ERC20(token).transfer(msg.sender, _amount);  // Transfer `_amount` tokens to the buyer's address
 
         // Emit an event to indicate a successful purchase
         emit TokensPurchased(msg.sender, _amount, totalPrice);

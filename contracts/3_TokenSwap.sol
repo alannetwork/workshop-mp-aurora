@@ -17,16 +17,13 @@ contract TokenSwap {
 
     function swapTokens(uint256 _amount) external {
         // Perform token transfer from the sender to the contract
-        // Implement the transfer logic for token A here
+        ERC20(tokenA).transferFrom(msg.sender, address(this), _amount);  // Transfer `_amount` tokens from the sender to the contract
 
         uint256 swappedAmount = _amount * exchangeRate;
 
         // Perform token transfer from the contract to the sender
-        // Implement the transfer logic for token B here
+        ERC20(tokenB).transfer(msg.sender, swappedAmount);  // Transfer `swappedAmount` tokens from the contract to the sender
 
         // Emit an event to indicate a successful token swap
         emit TokensSwapped(msg.sender, _amount, swappedAmount);
     }
-
-    event TokensSwapped(address indexed sender, uint256 amount, uint256 swappedAmount);
-}
